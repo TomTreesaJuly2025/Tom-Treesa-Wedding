@@ -25,7 +25,7 @@
     }
 
     .box {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       padding: 40px 30px;
       border-radius: 12px;
       text-align: center;
@@ -61,6 +61,24 @@
       background-color: #a88f3c;
     }
 
+    .btn-play {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: transparent;
+      color: #bfa046;
+      border: 2px solid #bfa046;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-play:hover {
+      background-color: #bfa046;
+      color: white;
+    }
+
     audio {
       display: none;
     }
@@ -71,11 +89,13 @@
     <h1>Thank You 💖</h1>
     <p>Your wishes mean the world to us!</p>
     <p>— Treesa & Tom</p>
+
     <a class="btn-home" href="index.html">Back to Main Page</a>
+    <br />
+    <button class="btn-play" onclick="document.getElementById('bgMusic').play()">Play Music</button>
   </div>
 
-  <!-- Background music -->
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="audio/canon-in-d-soft-piano.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
